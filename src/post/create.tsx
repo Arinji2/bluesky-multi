@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { ToastAction } from "@/components/ui/toast";
 import { useToast } from "@/hooks/use-toast";
 import { StyledBookmarkIcon } from "@/icons/bookmark";
+import GeneratePost from "@/post/generate-post";
 import { useEffect, useState } from "react";
 export default function CreatePost() {
   const [formValue, setFormValue] = useState("");
@@ -112,7 +113,7 @@ export default function CreatePost() {
               title: "Generating Posts",
               duration: 60000 * 30, //30 mins max
             });
-            const chunks = GeneratePostAction(formValue, addPageNo);
+            const chunks = GeneratePost(formValue, addPageNo);
 
             if (!chunks.success) {
               loadingToast.dismiss();
