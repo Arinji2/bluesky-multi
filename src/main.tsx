@@ -8,7 +8,9 @@ import { Toaster } from "@/components/ui/toaster.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <div className="w-full flex flex-col items-center justify-center bg-bg h-fit py-12">
+        <App />
+      </div>
       <Toaster />
     </BrowserRouter>
   </StrictMode>,
