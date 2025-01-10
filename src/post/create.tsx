@@ -15,6 +15,7 @@ import { useToast } from "@/hooks/use-toast";
 import { StyledBookmarkIcon } from "@/icons/bookmark";
 import GeneratePost from "@/post/generate-post";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function CreatePost() {
   const [formValue, setFormValue] = useState("");
   const [addPageNo, setAddPageNo] = useState(false);
@@ -22,6 +23,7 @@ export default function CreatePost() {
   const [wordsCount, setWordsCount] = useState(0);
   const [newLinesCount, setNewLinesCount] = useState(0);
   const { toast } = useToast();
+  const navigate = useNavigate();
   const updateCounters = (targetValue: string) => {
     setCharactersCount(targetValue.length);
     setWordsCount(targetValue.trim().split(/\s+/).filter(Boolean).length);
@@ -132,6 +134,8 @@ export default function CreatePost() {
                 description: chunks.message,
                 duration: 1000,
               });
+
+              navigate("/post");
             }, 1000);
           }}
         >
