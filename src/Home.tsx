@@ -13,6 +13,7 @@ import { StyledEditIcon } from "@/icons/edit";
 import { StyledBlueskyIcon } from "@/icons/bluesky";
 import { StyledGithubIcon } from "@/icons/github";
 import { StyledInfoIcon } from "@/icons/info";
+import { Badge } from "@/components/ui/badge";
 export default function Home() {
   return (
     <div className="w-full h-full bg-bg gap-12 flex flex-col items-center justify-center">
@@ -61,10 +62,12 @@ export default function Home() {
             </strong>{" "}
             post out of <strong>3</strong> total posts.
           </li>
-          <li>
+          <li className="flex flex-row items-center justify-center">
             To make edits, you can click the{" "}
-            <StyledEditIcon className="size-5 ml-1 mb-1" /> edit button for each
-            specific post.
+            <Badge className=" mx-1 inline-flex flex-row items-center justify-center gap-1">
+              <StyledEditIcon className="size-5" /> edit button{" "}
+            </Badge>{" "}
+            for each specific post.
           </li>
         </ol>
       </div>
