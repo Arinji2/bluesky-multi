@@ -4,6 +4,7 @@ import {
   Card,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
@@ -107,6 +108,20 @@ export default function Home() {
             </Button>
           </div>
         </CardContent>
+        <CardFooter>
+          <div className="flex flex-col items-start justify-start gap-2">
+            This is an OSS project, feel free to contribute to it on GitHub.
+            <Button asChild variant="neutral">
+              <a
+                href="https://github.com/arinji2/bluesky-multi"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                GitHub
+              </a>
+            </Button>
+          </div>
+        </CardFooter>
       </Card>
     </div>
   );
