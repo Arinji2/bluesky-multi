@@ -23,12 +23,12 @@ export default function Home() {
     }
   }, []);
   return (
-    <div className="w-full h-full bg-bg gap-12 flex flex-col items-center justify-center">
-      <div className="w-fit h-fit space-y-8 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <div className="w-full h-full bg-bg gap-8 md:gap-12 flex flex-col items-center justify-center">
+      <div className="w-fit h-fit space-y-4 md:space-y-8 text-center">
+        <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight lg:text-5xl">
           Bluesky Multi Poster
         </h1>
-        <p className="text-2xl ">
+        <p className="text-xl md:text-2xl ">
           An app to help you split up a huge post, into multiple bluesky sized
           posts.
         </p>
@@ -52,7 +52,7 @@ export default function Home() {
         <h2 className="text-3xl tracking-tight font-semibold" id="help">
           Help And Tips
         </h2>
-        <ol className="list-decimal text-center max-w-[700px] space-y-3 list-inside">
+        <ol className="list-decimal text-center md:text-base text-sm max-w-[700px] space-y-3 list-inside">
           <li>
             We divide your post into multiple posts, each with a max size of 300
             characters.
@@ -75,7 +75,7 @@ export default function Home() {
             </strong>{" "}
             post out of <strong>3</strong> total posts.
           </li>
-          <li className="flex flex-row items-center justify-center">
+          <li className="">
             To make edits, you can click the{" "}
             <Badge className=" mx-1 inline-flex flex-row items-center justify-center gap-1">
               <StyledEditIcon className="size-5" /> edit button{" "}
@@ -101,7 +101,7 @@ export default function Home() {
                 target="_blank"
                 aria-label="Bluesky"
               >
-                <StyledBlueskyIcon className="!size-8 " />
+                <StyledBlueskyIcon className="md:!size-8 !size-5 " />
               </a>
             </Button>
             <Button asChild className="bg-[#FFB443]">
@@ -110,7 +110,7 @@ export default function Home() {
                 target="_blank"
                 aria-label="Github"
               >
-                <StyledGithubIcon className="!size-8 " />
+                <StyledGithubIcon className="md:!size-8 !size-5 " />
               </a>
             </Button>
             <Button asChild className="bg-[#39DBFF]">
@@ -119,7 +119,7 @@ export default function Home() {
                 target="_blank"
                 aria-label="Portfolio"
               >
-                <StyledInfoIcon className="!size-8 " />
+                <StyledInfoIcon className="md:!size-8 !size-5 " />
               </a>
             </Button>
           </div>

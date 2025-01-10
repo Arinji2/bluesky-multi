@@ -29,7 +29,7 @@ export default function Post() {
           View Generated Posts
         </h2>
       </div>
-      <div className="w-fit h-fit flex flex-row items-center justify-center gap-4">
+      <div className="w-fit h-fit flex flex-col md:flex-row items-center justify-center gap-4">
         <Button
           variant="destructive"
           onClick={() => {
@@ -47,7 +47,7 @@ export default function Post() {
           <a href="/">Back to Generator</a>
         </Button>
       </div>
-      <div className="w-fit h-fit grid md:grid-cols-2 grid-cols-1 gap-6">
+      <div className="w-full md:w-fit h-fit grid md:grid-cols-2 grid-cols-1 gap-6">
         {postData.map((post, index) => {
           return (
             <div className="w-full h-full flex flex-col items-center justify-center">

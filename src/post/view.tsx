@@ -35,7 +35,7 @@ export default function ViewPost({
     updateCounters(formValue);
   }, [formValue]);
   return (
-    <Card className="w-[500px]">
+    <Card className="w-full md:w-[500px]">
       <CardHeader>
         <CardTitle>{index + 1}.</CardTitle>
         <CardDescription>
