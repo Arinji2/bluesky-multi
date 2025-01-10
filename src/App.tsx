@@ -1,3 +1,4 @@
+import AnimationLayout from "@/AnimationLayout";
 import Home from "@/Home";
 import Post from "@/Post";
 import { Route, Routes } from "react-router-dom";
@@ -5,8 +6,23 @@ import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/post" element={<Post />} />
+      <Route
+        path="/"
+        element={
+          <AnimationLayout>
+            <Home />
+          </AnimationLayout>
+        }
+      />
+
+      <Route
+        path="/post"
+        element={
+          <AnimationLayout>
+            <Post />
+          </AnimationLayout>
+        }
+      />
     </Routes>
   );
 }
