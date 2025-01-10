@@ -14,7 +14,14 @@ import { StyledBlueskyIcon } from "@/icons/bluesky";
 import { StyledGithubIcon } from "@/icons/github";
 import { StyledInfoIcon } from "@/icons/info";
 import { Badge } from "@/components/ui/badge";
+import { useEffect, useState } from "react";
 export default function Home() {
+  const [hasGeneratedPosts, setHasGeneratedPosts] = useState(false);
+  useEffect(() => {
+    if (localStorage.getItem("post-generate")) {
+      setHasGeneratedPosts(true);
+    }
+  }, []);
   return (
     <div className="w-full h-full bg-bg gap-12 flex flex-col items-center justify-center">
       <div className="w-fit h-fit space-y-8 text-center">
@@ -34,6 +41,12 @@ export default function Home() {
           <a href="#help">View Help And Tips</a>
         </Button>
       </div>
+      {hasGeneratedPosts && (
+        <Button asChild>
+          <a href="/post">View Generated Posts</a>
+        </Button>
+      )}
+
       <CreatePost />
       <div className="w-full h-fit flex flex-col items-center justify-start gap-6">
         <h2 className="text-3xl tracking-tight font-semibold" id="help">

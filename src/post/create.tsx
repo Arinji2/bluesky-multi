@@ -124,7 +124,6 @@ export default function CreatePost() {
               });
               return;
             }
-            console.log(chunks.data[0]);
             localStorage.setItem("post-generate", JSON.stringify(chunks.data));
             setTimeout(() => {
               loadingToast.update({
